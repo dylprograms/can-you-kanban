@@ -18,7 +18,7 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
       return res.sendStatus(403);
     }
     req.user = user as JwtPayload;
-    next();
+    return next();
 
   });
 }
